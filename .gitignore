@@ -1,0 +1,25 @@
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+*.ipr
+
+### Compiled Output ###
+out/
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+### Logs ###
+*.log
+
+### OS Generated Files ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
