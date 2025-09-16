@@ -33,33 +33,27 @@ connection = DriverManager.getConnection(
     "yourmysqlpassword"
 );
 
-🚀 Current Features
-Banking Authentication Portal: Swing-based login interface with card
-number and PIN validation
+## Current Features
 
-Customer Onboarding Form: Initial registration page collecting:
+- **Banking Authentication Portal:** Swing-based login interface with card number and PIN validation
+- **Multi-Step Customer Onboarding:**
+  - **Step 1:** Personal identification data (name, DOB, gender, contact, address)
+  - **Step 2:** Comprehensive financial profile including:
+    - Income details and financial background
+    - Education qualification and occupation
+    - Government ID verification (PAN, Aadhaar)
+    - Real-time MySQL database integration
+- **Form Validation:** Real-time input validation and error checking
+- **MySQL Database Integration:** Secure, persistent data storage with proper JDBC connectivity and live data persistence
 
-Personal identification data
+## Technology Stack
 
-Contact information (email)
+- **Frontend:** Java Swing & AWT (GUI Components)
+- **Backend:** Core Java
+- **Database:** MySQL with JDBC Connectivity
+- **IDE:** IntelliJ IDEA
 
-Residential address details
-
-Real-time input validation and error checking
-
-MySQL Database Integration: Secure, persistent data storage with
-proper JDBC connectivity
-
-💻 Technology Stack
-Frontend: Java Swing & AWT (GUI Components)
-
-Backend: Core Java
-
-Database: MySQL with JDBC Connectivity
-
-IDE: IntelliJ IDEA
-
-
+## Project Structure
 
 src/
 └── bank/
@@ -67,8 +61,10 @@ src/
         └── system/
             ├── Login.java          // Card number & PIN authentication
             ├── SignupOne.java      // Step 1: Personal details collection
+            ├── SignupTwo.java      // Step 2: Financial profile & government IDs
             ├── Conn.java           // MySQL database connection layer
             └── (More components in development)
 icons/
 ├── atm.jpg             // Application icon
 └── logo.jpg            // Logo used in the UI
+
