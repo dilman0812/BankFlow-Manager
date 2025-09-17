@@ -1,7 +1,7 @@
 -- Bank Management System Database Schema
 -- Creates the database and tables for the banking application
 
-CREATE DATABASE IF NOT EXISTS bankmanagementsystem;
+CREATE DATABASE bankmanagementsystem;
 USE bankmanagementsystem;
 
 -- Table for storing basic personal information (Signup One)
@@ -40,4 +40,11 @@ CREATE TABLE signupthree (
     card_number VARCHAR(25),
     pin_number VARCHAR(10),
     facility VARCHAR(100)
+);
+
+-- Table for storing login credentials (Card number and PIN)
+CREATE TABLE login (
+    formno VARCHAR(20),
+    card_number VARCHAR(25),
+    pin_number VARCHAR(10)
 );
