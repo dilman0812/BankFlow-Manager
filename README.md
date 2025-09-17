@@ -8,21 +8,25 @@ Swing and MySQL.
 ## 🗄️ Database Integration
 
 ### **JDBC Connectivity Implementation**
-This project implements robust MySQL database connectivity using Java 
-Database Connectivity (JDBC) API. The connection is established through 
-a dedicated `Conn.java` class following the standard JDBC process.
+This project implements robust MySQL database connectivity using Java Database Connectivity (JDBC) API. The connection is established through a dedicated Conn.java class following the standard JDBC process.
+
+**NEW: Complete Signup-to-Database Pipeline**
+- **SignupThree Integration:** Final signup form now persists all user data to MySQL
+- **Real-time Data Persistence:** User account creation fully operational with live database storage
+- **Multi-table Inserts:** Data efficiently stored across normalized database tables
 
 #### **JDBC Connection Steps Implemented:**
 1.  **Driver Auto-Loading:** JDBC 4.0+ automatic driver registration
 2.  **Connection Establishment:** 'DriverManager.getConnection()'
-3.  **Statement Creation:** 'connection.createStatement()'
-4.  **Query Execution:** (Implemented throughout application)
-5.  **Resource Management:** Proper connection closing
+3.  **NEW: PreparedStatement Usage:** Secure parameterized queries for user data insertion
+4.  **NEW: Transaction Management:** Atomic database operations for signup process
+5.  **Resource Management:** Proper connection closing with try-with-resources
 
 ### **Database Configuration**
 - **Database System:** MySQL
 - **Database Name:** 'bankmanagementsystem'
-- **Tables:** Users, Accounts, Transactions (to be implemented)
+- **NEW: Tables Implemented:** Users, Accounts, SignupData
+- **NEW: Data Validation:** Server-side validation before database insertion
 
 ### **Connection Setup**
 ```java
@@ -42,9 +46,13 @@ connection = DriverManager.getConnection(
     - Income details and financial background
     - Education qualification and occupation
     - Government ID verification (PAN, Aadhaar)
-    - Real-time MySQL database integration
+  - **Step 3:** Account services configuration and data persistence:
+    - Account type selection (Savings, Current, FD, RD)
+    - Digital banking services (ATM Card, Net Banking, Mobile Banking, Alerts, Cheque Book, E-Statement)
+    - Final confirmation and MySQL database integration
+- **Live Database Integration:** Real-time MySQL data persistence during signup process
 - **Form Validation:** Real-time input validation and error checking
-- **MySQL Database Integration:** Secure, persistent data storage with proper JDBC connectivity and live data persistence
+- **MySQL Database Integration:** Secure, persistent data storage with proper JDBC connectivity
 
 ## Technology Stack
 
@@ -62,9 +70,9 @@ src/
             ├── Login.java          // Card number & PIN authentication
             ├── SignupOne.java      // Step 1: Personal details collection
             ├── SignupTwo.java      // Step 2: Financial profile & government IDs
-            ├── Conn.java           // MySQL database connection layer
+            ├── SignupThree.java    // NEW: Step 3 - Account services & database persistence
+            ├── Conn.java           // MySQL database connection layer (enhanced)
             └── (More components in development)
 icons/
 ├── atm.jpg             // Application icon
 └── logo.jpg            // Logo used in the UI
-
