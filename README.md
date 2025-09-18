@@ -1,39 +1,36 @@
-  GNU nano 6.0.1                 README.md                 Modified  
 # Bank Management System
 
-A desktop-based Java application that simulates core banking operations, 
-including user registration, login, and fund transactions. Built with Java 
-Swing and MySQL.
+A desktop-based Java application that simulates core banking operations, including user registration, login, and fund transactions. Built with Java Swing and MySQL.
 
-## 🗄️ Database Integration
+##  Database Integration
 
 ### **JDBC Connectivity Implementation**
-This project implements robust MySQL database connectivity using Java Database Connectivity (JDBC) API. The connection is established through a dedicated Conn.java class following the standard JDBC process.
+This project implements robust MySQL database connectivity using Java Database Connectivity (JDBC) API. The connection layer ensures secure and efficient data persistence for all banking operations.
 
-**NEW: Complete Signup-to-Database Pipeline**
-- **SignupThree Integration:** Final signup form now persists all user data to MySQL
+**Complete Signup-to-Database Pipeline**
+- **SignupThree Integration:** Final signup form persists all user data to MySQL
 - **Real-time Data Persistence:** User account creation fully operational with live database storage
 - **Multi-table Inserts:** Data efficiently stored across normalized database tables
 
 #### **JDBC Connection Steps Implemented:**
 1.  **Driver Auto-Loading:** JDBC 4.0+ automatic driver registration
 2.  **Connection Establishment:** 'DriverManager.getConnection()'
-3.  **NEW: PreparedStatement Usage:** Secure parameterized queries for user data insertion
-4.  **NEW: Transaction Management:** Atomic database operations for signup process
+3.  **PreparedStatement Usage:** Secure parameterized queries for user data insertion
+4.  **Transaction Management:** Atomic database operations for signup process
 5.  **Resource Management:** Proper connection closing with try-with-resources
 
 ### **Database Configuration**
 - **Database System:** MySQL
 - **Database Name:** 'bankmanagementsystem'
-- **NEW: Tables Implemented:** Users, Accounts, SignupData
-- **NEW: Data Validation:** Server-side validation before database insertion
+- **Tables Implemented:** Users, Accounts, SignupData
+- **Data Validation:** Server-side validation before database insertion
 
 ### **Connection Setup**
 ```java
 // Database connection configuration in Conn.java
 connection = DriverManager.getConnection(
-    "jdbc:mysql://localhost:3306/bankmanagementsystem", 
-    "yourmysqlusername", 
+    "jdbc:mysql://localhost:3306/bankmanagementsystem",
+    "yourmysqlusername",
     "yourmysqlpassword"
 );
 
@@ -50,6 +47,15 @@ connection = DriverManager.getConnection(
     - Account type selection (Savings, Current, FD, RD)
     - Digital banking services (ATM Card, Net Banking, Mobile Banking, Alerts, Cheque Book, E-Statement)
     - Final confirmation and MySQL database integration
+- **NEW: Main Banking Dashboard:** Complete transactions interface with:
+  - Deposit operations
+  - Withdrawal system  
+  - Balance inquiry
+  - PIN change functionality
+  - Exit operations
+- **NEW: Professional UI Assets:** Enhanced user experience with:
+  - ATM interface background graphics
+  - Bank branding logo
 - **Live Database Integration:** Real-time MySQL data persistence during signup process
 - **Form Validation:** Real-time input validation and error checking
 - **MySQL Database Integration:** Secure, persistent data storage with proper JDBC connectivity
@@ -70,9 +76,9 @@ src/
             ├── Login.java          // Card number & PIN authentication
             ├── SignupOne.java      // Step 1: Personal details collection
             ├── SignupTwo.java      // Step 2: Financial profile & government IDs
-            ├── SignupThree.java    // NEW: Step 3 - Account services & database persistence
+            ├── SignupThree.java    // Step 3: Account services & database persistence
             ├── Conn.java           // MySQL database connection layer (enhanced)
-            └── (More components in development)
-icons/
-├── atm.jpg             // Application icon
-└── logo.jpg            // Logo used in the UI
+            ├── Transactions.java    // NEW: Main banking dashboard
+            └── icons/              // NEW: Visual assets
+                ├── atm.jpg         // ATM interface background
+                └── logo.jpg        // Bank branding logo
