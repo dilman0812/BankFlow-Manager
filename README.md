@@ -33,8 +33,9 @@ connection = DriverManager.getConnection(
     "yourmysqlusername",
     "yourmysqlpassword"
 );
+```
 
-## Current Features
+### Current Features
 
 - **Banking Authentication Portal:** Swing-based login interface with card number and PIN validation
 - **Multi-Step Customer Onboarding:**
