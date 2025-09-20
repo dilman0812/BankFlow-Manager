@@ -8,7 +8,7 @@ A desktop-based Java application that simulates core banking operations, includi
 This project implements robust MySQL database connectivity using Java Database Connectivity (JDBC) API. The connection layer ensures secure and efficient data persistence for all banking operations.
 
 **Complete Signup-to-Database Pipeline**
-- **SignupThree Integration:** Final signup form persists all user data to MySQL
+- **Signup Integration:** Final signup form persists all user data to MySQL
 - **Real-time Data Persistence:** User account creation fully operational with live database storage
 - **Multi-table Inserts:** Data efficiently stored across normalized database tables
 
@@ -47,13 +47,10 @@ connection = DriverManager.getConnection(
     - Account type selection (Savings, Current, FD, RD)
     - Digital banking services (ATM Card, Net Banking, Mobile Banking, Alerts, Cheque Book, E-Statement)
     - Final confirmation and MySQL database integration
-- **NEW: Main Banking Dashboard:** Complete transactions interface with:
+- **Main Banking Dashboard:** Complete transactions interface with:
   - Deposit operations
-  - Withdrawal system  
-  - Balance inquiry
-  - PIN change functionality
-  - Exit operations
-- **NEW: Professional UI Assets:** Enhanced user experience with:
+  - Withdrawal system
+- **Professional UI Assets:** Enhanced user experience with:
   - ATM interface background graphics
   - Bank branding logo
 - **Live Database Integration:** Real-time MySQL data persistence during signup process
@@ -69,6 +66,8 @@ connection = DriverManager.getConnection(
 
 ## Project Structure
 
+## Project Structure
+
 src/
 └── bank/
     └── management/
@@ -77,8 +76,10 @@ src/
             ├── SignupOne.java      // Step 1: Personal details collection
             ├── SignupTwo.java      // Step 2: Financial profile & government IDs
             ├── SignupThree.java    // Step 3: Account services & database persistence
-            ├── Conn.java           // MySQL database connection layer (enhanced)
-            ├── Transactions.java    // NEW: Main banking dashboard
-            └── icons/              // NEW: Visual assets
+            ├── Conn.java           // MySQL database connection layer
+            ├── Transactions.java    // Main banking dashboard
+            ├── Deposit.java        // Deposit transaction processing
+            ├── Withdrawal.java     // Withdrawal transaction processing
+            └── icons/              // Visual assets
                 ├── atm.jpg         // ATM interface background
                 └── logo.jpg        // Bank branding logo
