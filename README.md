@@ -66,8 +66,7 @@ connection = DriverManager.getConnection(
 - **IDE:** IntelliJ IDEA
 
 ## Project Structure
-
-## Project Structure
+```
 
 src/
 └── bank/
@@ -84,3 +83,4 @@ src/
             └── icons/              // Visual assets
                 ├── atm.jpg         // ATM interface background
                 └── logo.jpg        // Bank branding logo
+```
