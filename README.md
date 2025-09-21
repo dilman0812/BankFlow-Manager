@@ -1,15 +1,15 @@
 # Bank Management System
 
-A desktop-based Java application that simulates core banking operations, including user registration, login, and fund transactions. Built with Java Swing and MySQL.
+A desktop-based Java application that simulates core banking operations, including user r>
 
 ##  Database Integration
 
 ### **JDBC Connectivity Implementation**
-This project implements robust MySQL database connectivity using Java Database Connectivity (JDBC) API. The connection layer ensures secure and efficient data persistence for all banking operations.
+This project implements robust MySQL database connectivity using Java Database Connectivi>
 
 **Complete Signup-to-Database Pipeline**
 - **Signup Integration:** Final signup form persists all user data to MySQL
-- **Real-time Data Persistence:** User account creation fully operational with live database storage
+- **Real-time Data Persistence:** User account creation fully operational with live datab>
 - **Multi-table Inserts:** Data efficiently stored across normalized database tables
 
 #### **JDBC Connection Steps Implemented:**
@@ -48,12 +48,21 @@ connection = DriverManager.getConnection(
     - Account type selection (Savings, Current, FD, RD)
     - Digital banking services (ATM Card, Net Banking, Mobile Banking, Alerts, Cheque Book, E-Statement)
     - Final confirmation and MySQL database integration
+
 - **Main Banking Dashboard:** Complete transactions interface with:
   - Deposit operations
   - Withdrawal system
+  - **Fast Cash Withdrawal:** One-click preset amounts (₹100, ₹500, ₹1000, ₹2000, ₹5000, ₹10,000) with real-time balance validation
+
+- **Database Integration:**
+  - MySQL Transaction Processing: Real-time withdrawal recording with timestamps
+  - Balance Validation: Instant fund availability checks before processing
+  - Error Handling: Insufficient funds validation and exception handling
+
 - **Professional UI Assets:** Enhanced user experience with:
   - ATM interface background graphics
   - Bank branding logo
+
 - **Live Database Integration:** Real-time MySQL data persistence during signup process
 - **Form Validation:** Real-time input validation and error checking
 - **MySQL Database Integration:** Secure, persistent data storage with proper JDBC connectivity
@@ -67,7 +76,6 @@ connection = DriverManager.getConnection(
 
 ## Project Structure
 ```
-
 src/
 └── bank/
     └── management/
@@ -80,7 +88,9 @@ src/
             ├── Transactions.java    // Main banking dashboard
             ├── Deposit.java        // Deposit transaction processing
             ├── Withdrawal.java     // Withdrawal transaction processing
+            ├── FastCash.java       // One-click preset amount withdrawals
             └── icons/              // Visual assets
                 ├── atm.jpg         // ATM interface background
                 └── logo.jpg        // Bank branding logo
+
 ```
