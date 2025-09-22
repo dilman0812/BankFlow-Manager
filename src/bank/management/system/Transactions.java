@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class Transactions extends JFrame implements ActionListener {
 
-    JButton deposit, withdrawl, fast_cash, mini_statement, pin_change, balance_enquiry, exit;
+    JButton deposit, withdrawl, fast_cash, mini_statement, pin_change, balance_inquiry, exit;
     String pinNumber;
     Transactions(String pinNumber) {
         this.pinNumber = pinNumber;                 // storing local variable in global variable
@@ -49,10 +49,10 @@ public class Transactions extends JFrame implements ActionListener {
         pin_change.addActionListener(this);
         image.add(pin_change);
 
-        balance_enquiry = new JButton("Balance Enquiry");
-        balance_enquiry.setBounds(355,485,150,30);
-        balance_enquiry.addActionListener(this);
-        image.add(balance_enquiry);
+        balance_inquiry = new JButton("Balance Inquiry");
+        balance_inquiry.setBounds(355,485,150,30);
+        balance_inquiry.addActionListener(this);
+        image.add(balance_inquiry);
 
         exit = new JButton("Exit");
         exit.setBounds(355,520,150,30);
@@ -86,9 +86,9 @@ public class Transactions extends JFrame implements ActionListener {
             setVisible(false);
             new PinChange(pinNumber).setVisible(true);
         }
-        else if (ae.getSource() == balance_enquiry){
+        else if (ae.getSource() == balance_inquiry){
             setVisible(false);
-            new BalanceEnquiry(pinNumber).setVisible(true);
+            new BalanceInquiry(pinNumber).setVisible(true);
         }
     }
 
