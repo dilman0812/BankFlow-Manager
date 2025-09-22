@@ -43,29 +43,23 @@ connection = DriverManager.getConnection(
   - **Step 2:** Comprehensive financial profile including:
     - Income details and financial background
     - Education qualification and occupation
-    - Government ID verification (PAN, Aadhaar)
-  - **Step 3:** Account services configuration and data persistence:
-    - Account type selection (Savings, Current, FD, RD)
-    - Digital banking services (ATM Card, Net Banking, Mobile Banking, Alerts, Cheque Book, E-Statement)
-    - Final confirmation and MySQL database integration
+  - **Step 3:** Account services configuration and data persistence
 
 - **Main Banking Dashboard:** Complete transactions interface with:
   - Deposit operations
   - Withdrawal system
-  - **Fast Cash Withdrawal:** One-click preset amounts (₹100, ₹500, ₹1000, ₹2000, ₹5000, ₹10,000) with real-time balance validation
+  - Fast Cash Withdrawal: One-click preset amounts
+  - **PIN Change:** PIN update functionality with basic validation
+  - **Balance Inquiry:** Account balance calculation
 
 - **Database Integration:**
-  - MySQL Transaction Processing: Real-time withdrawal recording with timestamps
-  - Balance Validation: Instant fund availability checks before processing
-  - Error Handling: Insufficient funds validation and exception handling
+  - MySQL Transaction Processing
+  - Balance Validation
+  - PIN management across multiple tables
 
-- **Professional UI Assets:** Enhanced user experience with:
-  - ATM interface background graphics
-  - Bank branding logo
-
-- **Live Database Integration:** Real-time MySQL data persistence during signup process
-- **Form Validation:** Real-time input validation and error checking
-- **MySQL Database Integration:** Secure, persistent data storage with proper JDBC connectivity
+- **Professional UI Assets:** Enhanced user experience with ATM interface graphics
+- **Form Validation:** Basic input validation and error checking
+- **MySQL Database Integration:** Persistent data storage with JDBC connectivity
 
 ## Technology Stack
 
@@ -82,13 +76,15 @@ src/
         └── system/
             ├── Login.java          // Card number & PIN authentication
             ├── SignupOne.java      // Step 1: Personal details collection
-            ├── SignupTwo.java      // Step 2: Financial profile & government IDs
-            ├── SignupThree.java    // Step 3: Account services & database persistence
+            ├── SignupTwo.java      // Step 2: Financial profile & occupation
+            ├── SignupThree.java    // Step 3: Account services configuration
             ├── Conn.java           // MySQL database connection layer
-            ├── Transactions.java    // Main banking dashboard
+            ├── Transactions.java   // Main banking dashboard
             ├── Deposit.java        // Deposit transaction processing
             ├── Withdrawal.java     // Withdrawal transaction processing
             ├── FastCash.java       // One-click preset amount withdrawals
+            ├── PinChange.java      // PIN update functionality
+            ├── BalanceInquiry.java // Account balance calculation
             └── icons/              // Visual assets
                 ├── atm.jpg         // ATM interface background
                 └── logo.jpg        // Bank branding logo
