@@ -1,15 +1,15 @@
 # Bank Management System
 
-A desktop-based Java application that simulates core banking operations, including user r>
+A desktop-based Java application that simulates core banking operations, including user registration, login, and fund transactions.
 
 ##  Database Integration
 
 ### **JDBC Connectivity Implementation**
-This project implements robust MySQL database connectivity using Java Database Connectivi>
+This project implements robust MySQL database connectivity using Java Database Connectivity (JDBC) for persistent data storage.
 
 **Complete Signup-to-Database Pipeline**
-- **Signup Integration:** Final signup form persists all user data to MySQL
-- **Real-time Data Persistence:** User account creation fully operational with live datab>
+- **3-Step Registration System:** Multi-form user onboarding with progressive data collection
+- **Real-time Data Persistence:** User account creation fully operational with live database
 - **Multi-table Inserts:** Data efficiently stored across normalized database tables
 
 #### **JDBC Connection Steps Implemented:**
@@ -21,8 +21,8 @@ This project implements robust MySQL database connectivity using Java Database C
 
 ### **Database Configuration**
 - **Database System:** MySQL
-- **Database Name:** 'bankmanagementsystem'
-- **Tables Implemented:** Users, Accounts, SignupData
+- **Database Name:** `bankmanagementsystem`
+- **Tables Implemented:** `signup`, `signuptwo`, `signupthree`, `login`, `bank`
 - **Data Validation:** Server-side validation before database insertion
 
 ### **Connection Setup**
@@ -35,30 +35,32 @@ connection = DriverManager.getConnection(
 );
 ```
 
-### Current Features
+## Current Features
 
 - **Banking Authentication Portal:** Swing-based login interface with card number and PIN validation
-- **Multi-Step Customer Onboarding:**
-  - **Step 1:** Personal identification data (name, DOB, gender, contact, address)
-  - **Step 2:** Comprehensive financial profile including:
-    - Income details and financial background
-    - Education qualification and occupation
-  - **Step 3:** Account services configuration and data persistence
+
+- **3-Step Customer Onboarding Process:**
+  - **Step 1 (SignupOne):** Personal identification data collection including name, father's name, date of birth, gender, email, marital status, and complete address details
+  - **Step 2 (SignupTwo):** Comprehensive financial profile including religion, category, income range, education qualification, occupation, and identification documents
+  - **Step 3 (SignupThree):** Account configuration with card generation, PIN assignment, and banking service selection
 
 - **Main Banking Dashboard:** Complete transactions interface with:
   - Deposit operations
   - Withdrawal system
   - Fast Cash Withdrawal: One-click preset amounts
-  - **PIN Change:** PIN update functionality with basic validation
-  - **Balance Inquiry:** Account balance calculation
+  - PIN Change: PIN update functionality with basic validation
+  - Balance Inquiry: Account balance calculation
+  - Mini Statements: Transaction history with balance display
 
 - **Database Integration:**
   - MySQL Transaction Processing
   - Balance Validation
   - PIN management across multiple tables
+  - Transaction history tracking
+  - Automated card number and PIN generation
 
 - **Professional UI Assets:** Enhanced user experience with ATM interface graphics
-- **Form Validation:** Basic input validation and error checking
+- **Form Validation:** Comprehensive input validation and error checking across all forms
 - **MySQL Database Integration:** Persistent data storage with JDBC connectivity
 
 ## Technology Stack
@@ -85,6 +87,7 @@ src/
             ├── FastCash.java       // One-click preset amount withdrawals
             ├── PinChange.java      // PIN update functionality
             ├── BalanceInquiry.java // Account balance calculation
+            ├── MiniStatement.java  // Transaction history and balance display
             └── icons/              // Visual assets
                 ├── atm.jpg         // ATM interface background
                 └── logo.jpg        // Bank branding logo
