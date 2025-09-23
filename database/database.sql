@@ -48,3 +48,11 @@ CREATE TABLE login (
     card_number VARCHAR(25),
     pin_number VARCHAR(10)
 );
+
+-- Table for storing banking transactions (Deposits, Withdrawals)
+CREATE TABLE bank (
+    pin VARCHAR(10),
+    date VARCHAR(50),
+    type VARCHAR(20),
+    amount VARCHAR(20)
+);
